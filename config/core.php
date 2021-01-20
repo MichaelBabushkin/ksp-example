@@ -2,6 +2,15 @@
 // show error reporting
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
+
+// set your default time-zone
+date_default_timezone_set('Asia/Jerusalem');
+
+// variables used for jwt
+$key = "example_key";
+$issued_at = time();
+$expiration_time = $issued_at + (60 * 60); // valid for 1 hour
+$issuer = "http://localhost/ksp-example/";
  
 // home page url
 $home_url="http://localhost/ksp-example/";
